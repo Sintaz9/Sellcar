@@ -1,0 +1,78 @@
+@font-face {
+    font-family: Mons;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+.content-container {
+    margin: 15vw 0 5vw 0;
+    .main-h1 {
+        font-size: 3vw;
+        color: white;
+        font-weight: bold;
+        font-family: Mons;
+        text-align: center;
+    }
+    .cars-conteiner {
+        margin: 8vw 0 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5vw;
+        flex-direction: column;
+        .cars-conteiner1-3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2vw;
+            .single-car-container {
+                position: relative;
+                .single-car {
+                    width: 30vw;
+                    border-radius: 2vw;
+                    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.404);
+                    transition: 0.3s;
+                    cursor: pointer;
+                }
+                .car-name {
+                    font-size: 1.5vw;
+                    color: white;
+                    font-weight: 500;
+                    font-family: Mons;
+                    text-align: center;
+                    text-shadow: 0 0 10px black;
+                }
+                .car-caption {
+                    display: none;
+                    animation: car-caption-anim 2s linear;
+                }
+                &:hover {
+                    .car-caption {
+                        display: block;
+                        position: absolute;
+                        z-index: 1;
+                        left: 30%;
+                        top: 30%;
+                        color: white;
+                        font-family: Mons;
+                        transition: 0.3s;
+                        &:hover {
+                            color: rgb(196, 196, 196);
+                        }
+                    }
+                    .single-car {
+                        filter: brightness(80%)
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes car-caprion-anim {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

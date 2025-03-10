@@ -1,0 +1,113 @@
+.listing-item {
+    background-color: #1c1f26;
+    color: #d1d5db;
+    padding: 16px;
+    display: flex;
+    gap: 16px;
+  }
+  
+  .listing-item__wrap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  
+  .listing-item__photo img {
+    width: 15vw;
+    border-radius: 6px;
+  }
+  
+  .listing-item__about {
+    flex-grow: 1;
+  }
+  
+  .listing-item__title {
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+  }
+  
+  .listing-item__title a {
+    text-decoration: none;
+    color: #3ea6ff;
+  }
+  
+  .listing-item__badges {
+    display: flex;
+    gap: 8px;
+    margin: 8px 0;
+  }
+  
+  .badge {
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+  }
+  
+  .badge--top {
+    background-color: #ffcc00;
+    color: #000;
+  }
+  
+  .badge--secondary {
+    background-color: #444;
+    color: #fff;
+  }
+  
+  .listing-item__params {
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: inline-block;
+    padding: 1%;
+    vertical-align: top;
+  }
+  
+  .listing-item__prices {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffcc00;
+    display: inline-block;
+    padding: 1%;
+    vertical-align: top;
+  }
+  
+  .listing-item__priceusd {
+    font-size: 14px;
+    color: #b0b0b0;
+  }
+  
+  .listing-item__finance a {
+    color: #3ea6ff;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  
+  .listing-item__message {
+    font-size: 14px;
+    color: #9ca3af;
+    margin: 8px 0;
+  }
+  
+  .listing-item__info {
+    font-size: 12px;
+    color: #6b7280;
+  }
+  
+  .listing-item__controls {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .card__actions-item {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+.first-block{
+    display: inline-block;
+    padding: 0 1.5%;
+}
+  

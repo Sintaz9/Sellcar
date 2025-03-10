@@ -1,0 +1,59 @@
+@font-face {
+    font-family: Mons;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: Mons-B;
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+.html-block2 {
+    display: flex;
+    flex-direction: column;
+    margin: 13vw 0 5vw 0;
+    .car-header {
+        text-align: center;
+        color: white;
+        font-family: Mons-B;
+        font-weight: bold;
+        font-size: 2vw;
+    }
+    .content-container2 {
+        display: flex;
+        justify-content: center;
+        margin: 5vw 0 0 0;
+        iframe {
+            margin: 0 5vw;
+            width: 40vw;
+            height: 20vw;
+            border-radius: 2vw;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.719);
+        }
+        .p-container {
+            width: 80%;
+            p {
+                font-family: Mons;
+                font-weight: 100;
+                color: white;
+                font-size: 1.5vw;
+            }
+            .p-cost {
+                font-weight: bolder;
+                .cost-span {
+                    font-size: 1.8vw;
+                }
+            }
+        }
+    }
+    .car-header2 {
+        margin: 5vw 0 5vw 0;
+    }
+    .movie-img-container {
+        display: flex;
+        justify-content: center;
+        gap: 3vw;
+        img {
+            width: 30vw;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.719);
+        }
+    }
+}

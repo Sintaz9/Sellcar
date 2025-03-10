@@ -1,0 +1,67 @@
+.container {
+    display: flex;
+    align-items: center;
+    background-color: #ECF0F3;
+    padding: 1%;
+    border-radius: 10px;
+    width: 82vw;
+    margin: auto;
+}
+
+.filter-item {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 5px;
+    padding: 1% 1.5%;
+    margin: auto;
+    border: 1px solid #ccc;
+}
+
+.double-select, .double-input {
+    display: flex;
+    gap: 1px;
+    align-items: right;
+}
+
+select, input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 15px;
+    padding: 1px;
+}
+
+input[type="number"] {
+    text-align: center;
+}
+
+.search {
+    background-color: #1C4532;
+    color: white;
+    padding: 1.2% 5%;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+.search a {
+    text-decoration: none;
+    color: white;
+}
+
+.search:hover {
+    background-color: #17402E;
+}
+.catalog_car{
+    width: 82vw;
+    height: 90vh;
+    background-color: #dbdfde;
+    border: 8px solid rgb(75, 71, 71);
+    border-top: 0;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin: auto;
+    overflow: scroll;
+}
