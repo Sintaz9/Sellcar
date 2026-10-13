@@ -9,13 +9,13 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-// Подключение к базе данных Railway
+// Подключение к базе данных. Данные берутся из файла .env
 const db = mysql.createConnection({
-	host: 'turntable.proxy.rlwy.net', // Хост от Railway
-	user: 'root', // Пользователь от Railway
-	password: 'whZPXqtLovNCPhpltoPHYktYmpVjBFbX', // Пароль от Railway
-	database: 'railway', // Имя базы данных на Railway
-	port: 39259, // Порт от Railway
+	host: process.env.DB_HOST,
+	user: process.env.DB_USER,
+	password: process.env.DB_PASSWORD,
+	database: process.env.DB_NAME,
+	port: process.env.DB_PORT,
 })
 
 db.connect(err => {
@@ -62,7 +62,7 @@ app.post('/login', (req, res) => {
 		bcrypt.compare(password, user.password, (err, isMatch) => {
 			if (!isMatch) return res.status(401).json({ message: 'Неверные данные' })
 
-			const token = jwt.sign({ id: user.id }, 'секретный_ключ', {
+			const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
 				expiresIn: '1h',
 			})
 			res.json({ token })
@@ -71,5 +71,5 @@ app.post('/login', (req, res) => {
 })
 
 // Запуск сервера
-const PORT = 5000
+const PORT = process.env.PORT || 5000
 app.listen(PORT, () => console.log(`Сервер запущен на порту ${PORT}`))
